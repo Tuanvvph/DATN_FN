@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới Thiệu - Dojin Luxury</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script>
+    window.onload = function() {
+      loadMenu('gioithieu');
+    }
+  </script>
+  <style>
+    .banner {
+      background: url('img/banner.jpg') no-repeat center center;
+      background-size: cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .about-section {
+      padding: 50px 0;
+    }
+    .about-image {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .highlight {
+      color: #d63384;
+      font-weight: bold;
+    }
+
+    .contact-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 100vw;
+      background-color: #f9f9f9;
+      margin: auto;
+    }
+    .contact-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 10px 15px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .contact-icon {
+      font-size: 20px;
+      color: #007bff;
+      margin-right: 15px;
+      width: 30px;
+      text-align: center;
+    }
+    .contact-label {
+      font-weight: bold;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu">
+</nav>
+
+<!-- Banner -->
+<div class="banner text-center">
+  Chào mừng đến với <span class="highlight"> Dojin Luxury</span>
+</div>
+
+<!-- Nội dung giới thiệu -->
+<div class="container about-section">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h2>Về Chúng Tôi</h2>
+      <p>
+        <span class="highlight">Dojin Luxury</span> là thương hiệu hàng đầu trong lĩnh vực kinh doanh túi xách cao cấp và thời trang.
+        Chúng tôi cung cấp các mẫu túi xách <strong>hot trend</strong>, chất lượng cao với mức giá tốt nhất trên thị trường.
+      </p>
+      <p>Với đội ngũ chuyên gia giàu kinh nghiệm, chúng tôi cam kết mang đến cho khách hàng trải nghiệm mua sắm tuyệt vời nhất.</p>
+      <p>Hãy cùng khám phá bộ sưu tập túi xách sang trọng và tinh tế tại cửa hàng của chúng tôi!</p>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="img/1.jpg" alt="Dojin Luxury" class="about-image">
+    </div>
+  </div>
+</div>
+
+<!-- Lợi ích của chúng tôi -->
+<div class="container">
+  <h2 class="text-center mb-4">Tại Sao Chọn Chúng Tôi?</h2>
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <i class="fa-solid fa-star fa-3x text-warning"></i>
+      <h4>Chất Lượng Cao</h4>
+      <p>Sản phẩm được làm từ chất liệu cao cấp, bền đẹp theo thời gian.</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <i class="fa-solid fa-truck fa-3x text-success"></i>
+      <h4>Giao Hàng Nhanh</h4>
+      <p>Miễn phí giao hàng toàn quốc, nhận hàng nhanh chóng.</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <i class="fa-solid fa-hand-holding-dollar fa-3x text-danger"></i>
+      <h4>Giá Cả Cạnh Tranh</h4>
+      <p>Giá tốt nhất trên thị trường, cam kết không tăng giá vô lý.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Feedback khách hàng -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Khách Hàng Nói Gì?</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card p-3">
+        <p><i>"Túi xách rất đẹp, chất lượng tốt, giá hợp lý. Rất hài lòng với dịch vụ!"</i></p>
+        <h6 class="text-end">- Nguyễn Thị A</h6>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3">
+        <p><i>"Giao hàng nhanh, mẫu mã đẹp như hình, sẽ tiếp tục ủng hộ!"</i></p>
+        <h6 class="text-end">- Trần Văn B</h6>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3">
+        <p><i>"Shop uy tín, tư vấn nhiệt tình, sản phẩm đáng đồng tiền!"</i></p>
+        <h6 class="text-end">- Lê Thị C</h6>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Liên hệ -->
+<div class="container text-center my-5">
+  <div class="contact-card">
+    <h2>Thông Tin Liên Hệ</h2>
+    <p>Nếu bạn có bất kỳ câu hỏi nào, hãy liên hệ với chúng tôi qua các kênh sau:</p>
+
+    <div class="contact-row">
+      <i class="fa-solid fa-phone contact-icon"></i>
+      <div><span class="contact-label">Hotline:</span> 0987 654 321</div>
+    </div>
+
+    <div class="contact-row">
+      <i class="fa-solid fa-envelope contact-icon"></i>
+      <div><span class="contact-label">Email:</span> support@tuixachthoitrang.com</div>
+    </div>
+
+    <div class="contact-row">
+      <i class="fa-solid fa-location-dot contact-icon"></i>
+      <div><span class="contact-label">Địa chỉ:</span> 123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh</div>
+    </div>
+
+    <div class="contact-row">
+      <i class="fa-solid fa-clock contact-icon"></i>
+      <div><span class="contact-label">Giờ làm việc:</span> 8:00 - 21:00 (T2 - CN)</div>
+    </div>
+  </div>
+<!--  <h2>Liên Hệ Với Chúng Tôi</h2>-->
+<!--  <p>Email: <strong>support@tuixachthoitrang.com</strong></p>-->
+<!--  <p>Hotline: <strong>0987 654 321</strong></p>-->
+<!--  <p>Địa chỉ: <strong>123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh</strong></p>-->
+<!--  <button class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Gửi Email</button>-->
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-light py-4" id="footer">
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

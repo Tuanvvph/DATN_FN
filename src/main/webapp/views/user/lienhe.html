@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu - Dojin Luxury</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="js/menu.js"></script>
+    <style>
+        .contact-banner {
+            background: url('img/banner.jpg') no-repeat center center;
+            background-size: cover;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .contact-section {
+            padding: 50px 0;
+        }
+        .contact-info i {
+            color: #d63384;
+            font-size: 24px;
+        }
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .contact-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 100vw;
+            background-color: #f9f9f9;
+            margin: auto;
+        }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            background: #fff;
+            border-radius: 8px;
+            padding: 10px 15px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .contact-icon {
+            font-size: 20px;
+            color: #007bff;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+        .contact-label {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            loadMenu('lienhe');
+            loadFooter();
+        }
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu">
+</nav>
+<!-- Banner -->
+<div class="contact-banner text-center">
+    Liên Hệ Với Chúng Tôi
+</div>
+
+<!-- Thông tin liên hệ -->
+<div class="container contact-section">
+    <div class="row">
+
+        <div class="contact-card">
+            <h2>Thông Tin Liên Hệ</h2>
+            <p>Nếu bạn có bất kỳ câu hỏi nào, hãy liên hệ với chúng tôi qua các kênh sau:</p>
+
+            <div class="contact-row">
+                <i class="fa-solid fa-phone contact-icon"></i>
+                <div><span class="contact-label">Hotline:</span> 0987 654 321</div>
+            </div>
+
+            <div class="contact-row">
+                <i class="fa-solid fa-envelope contact-icon"></i>
+                <div><span class="contact-label">Email:</span> support@tuixachthoitrang.com</div>
+            </div>
+
+            <div class="contact-row">
+                <i class="fa-solid fa-location-dot contact-icon"></i>
+                <div><span class="contact-label">Địa chỉ:</span> 123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh</div>
+            </div>
+
+            <div class="contact-row">
+                <i class="fa-solid fa-clock contact-icon"></i>
+                <div><span class="contact-label">Giờ làm việc:</span> 8:00 - 21:00 (T2 - CN)</div>
+            </div>
+        </div>
+    </div>
+        <!--        <div class="col-md-6">-->
+<!--            <h2>Thông Tin Liên Hệ</h2>-->
+<!--            <p>Nếu bạn có bất kỳ câu hỏi nào, hãy liên hệ với chúng tôi qua các kênh sau:</p>-->
+<!--            <ul class="list-unstyled">-->
+<!--                <li class="contact-info"><i class="fa-solid fa-phone"></i> Hotline: <strong>0987 654 321</strong></li>-->
+<!--                <li class="contact-info"><i class="fa-solid fa-envelope"></i> Email: <strong>support@tuixachthoitrang.com</strong></li>-->
+<!--                <li class="contact-info"><i class="fa-solid fa-location-dot"></i> Địa chỉ: <strong>123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh</strong></li>-->
+<!--                <li class="contact-info"><i class="fa-solid fa-clock"></i> Giờ làm việc: <strong>8:00 - 21:00 (T2 - CN)</strong></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class="col-md-6">-->
+<!--            <h2>Gửi Tin Nhắn</h2>-->
+<!--            <form id="contactForm">-->
+<!--                <div class="mb-3">-->
+<!--                    <label for="name" class="form-label">Họ và Tên</label>-->
+<!--                    <input type="text" class="form-control" id="name" placeholder="Nhập tên của bạn" required>-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                    <label for="email" class="form-label">Email</label>-->
+<!--                    <input type="email" class="form-control" id="email" placeholder="Nhập email của bạn" required>-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                    <label for="message" class="form-label">Tin Nhắn</label>-->
+<!--                    <textarea class="form-control" id="message" rows="4" placeholder="Nhập nội dung tin nhắn" required></textarea>-->
+<!--                </div>-->
+<!--                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Gửi Tin Nhắn</button>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+</div>
+
+<!-- Google Map -->
+<div class="container my-5">
+    <h2 class="text-center">Bản Đồ</h2>
+    <div class="map-container">
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8638060191042!2d105.74468687529551!3d21.038134787456414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455e940879933%3A0xcf10b34e9f1a03df!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEZQVCBQb2x5dGVjaG5pYw!5e0!3m2!1svi!2s!4v1746189166792!5m2!1svi!2s"
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+</div>
+
+<!-- Footer -->
+<!--<footer class="text-center py-4 bg-light">-->
+<!--    <p>&copy; 2025 Dojin Luxury | Mọi quyền được bảo lưu.</p>-->
+<!--</footer>-->
+<!-- Footer -->
+<footer class="bg-dark text-light py-4" id="footer">
+</footer>
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        swal("Cảm ơn bạn!", "Chúng tôi đã nhận được tin nhắn của bạn!", "success");
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
