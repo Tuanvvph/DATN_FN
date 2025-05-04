@@ -141,7 +141,7 @@ async function loadMyInvoice() {
     for (i = 0; i < list.length; i++) {
         main += `<tr>
                     <td>${list[i].maDon}</td>
-                    <td>${list[i].createdAt}</td>
+                    <td>${dayjs(list[i].createdAt).format('YYYY-MM-DD HH:mm:ss')}</td>
                     <td>${formatmoney(list[i].tongGia + list[i].phiShip)}</td>
                     <td>${formatmoney(list[i].phiShip)}</td>
                     <td>
@@ -171,7 +171,7 @@ async function loadDetailInvoice(id) {
         })
     });
     var result = await res.json();
-    document.getElementById("ngaydat").innerHTML = result.createdAt
+    document.getElementById("ngaydat").innerHTML = dayjs(result.createdAt).format('YYYY-MM-DD HH:mm:ss')
     document.getElementById("trangthai").innerHTML = result.trangThai
     document.getElementById("pttt").innerHTML = result.loaiThanhToan
     document.getElementById("hotengh").innerHTML = result.hoTen

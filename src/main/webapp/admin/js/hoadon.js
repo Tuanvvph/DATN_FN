@@ -26,14 +26,14 @@ async function loadHoaDon() {
     for (i = 0; i < list.length; i++) {
         main += `<tr>
                     <td>${list[i]?.maDon}</td>
-                    <td>${list[i].createdAt}</td>
+                    <td>${dayjs(list[i].createdAt).format('YYYY-MM-DD HH:mm:ss')}</td>
                     <td>${list[i].loaiHoaDon}</td>
                     <td>${formatmoney(list[i].tongGia + list[i].phiShip)}</td>
                     <td>${formatmoney(list[i].phiShip)}</td>
                     <td>
                         <strong>Họ tên</strong>: ${list[i].hoTen}<br>
                         <strong>Số điện thoại</strong>: ${list[i].soDienThoai}<br>
-                        <strong>Địa chỉ</strong>: ${list[i].diaChi}, ${list[i].diaChi}<br>
+                        <strong>Địa chỉ</strong>: ${list[i]?.diaChi ?? '-'}<br>
                     </td>
                     <td>${list[i].trangThai}</td>
                     <td>
@@ -60,7 +60,7 @@ async function loadDetailInvoice(id) {
         })
     });
     var result = await res.json();
-    document.getElementById("ngaydat").innerHTML = result.createdAt
+    document.getElementById("ngaydat").innerHTML = dayjs(result.createdAt).format('YYYY-MM-DD HH:mm:ss')
     document.getElementById("trangthaiup").innerHTML = result.trangThai
     document.getElementById("pttt").innerHTML = result.loaiThanhToan
     document.getElementById("hotengh").innerHTML = result.hoTen

@@ -211,9 +211,9 @@ function loadFooter() {
                 <div class="col-md-3">
                     <h5>Liên hệ</h5>
                     <ul class="list-unstyled">
-                        <li><i class="fas fa-map-marker-alt me-2"></i>123 Đường ABC, Quận XYZ, TP.HCM</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Cao Đẳng FPT </li>
                         <li><i class="fas fa-phone me-2"></i>0123 456 789</li>
-                        <li><i class="fas fa-envelope me-2"></i>info@dojinluxury.com</li>
+                        <li><i class="fas fa-envelope me-2"></i>dojinluxury@gmail.com</li>
                     </ul>
                 </div>
                 <div class="col-md-3">
