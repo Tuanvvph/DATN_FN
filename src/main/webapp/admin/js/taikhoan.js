@@ -35,8 +35,7 @@ async function loadAllUser() {
                     <i onclick="setRole(${listUser[i].id}, '${listUser[i].quyen.tenQuyen}')" data-bs-toggle="modal" data-bs-target="#modalrole" class="fa fa-edit iconaction"></i>
                     </td>
                     <td class="d-flex chucnangtd">
-                        <button class="btn btn-warning btn-sm">Sửa</button>
-                        <button onclick="deleteUser(${listUser[i].id})" class="btn btn-danger btn-sm">Xóa</button>
+                        ${listUser[i].quyen.tenQuyen == "ROLE_ADMIN" ? '' : `<button onclick="deleteUser(${listUser[i].id})" class="btn btn-danger btn-sm">Xóa</button>`}
                         ${btn}
                     </td>
                 </tr>`
