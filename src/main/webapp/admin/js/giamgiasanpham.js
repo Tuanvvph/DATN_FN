@@ -13,7 +13,7 @@ async function loadGiamGiaSp() {
     for (i = 0; i < list.length; i++) {
         main += `<tr>
                     <td>${Number(i) + Number(1)}</td>
-                    <td>${list[i].ngayKetThuc}</td>
+                    <td>${list[i].ngayKetThuc ? dayjs(list[i].ngayKetThuc).format('YYYY-MM-DD HH:mm:ss') : ''}</td>
                     <td>${list[i].loaiGiamGia}</td>
                     <td>${list[i].loaiGiamGia=='CO_DINH'?formatmoney(list[i].giaTriGiam):list[i].giaTriGiam+'%'}</td>
                     <td>${list[i].daHoanThanh == false?'<span class="error">Chưa hoàn thành</span>':'<span class="success">Đã hoàn thành</span>'}</td>

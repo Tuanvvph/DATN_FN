@@ -47,6 +47,15 @@ async function saveCategory() {
     var uls = new URL(document.URL)
     var id = document.getElementById("idcm").value
     var catename = document.getElementById("tencm").value
+
+    if(!catename) {
+        swal({
+            type: 'error',
+            title: 'Lỗi',
+            text: 'Hãy nhập giá trị.'
+        });
+        return;
+    }
     var url = 'http://localhost:8080/api/loai-san-pham/admin/create-update';
     var category = {
         "id": id,

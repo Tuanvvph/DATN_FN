@@ -48,11 +48,21 @@ async function saveMauSac() {
     var uls = new URL(document.URL)
     var id = document.getElementById("idcm").value
     var catename = document.getElementById("tencm").value
+    var maMau = document.getElementById("mamau").value
+
+    if(!catename || !maMau) {
+        swal({
+            type: 'error',
+            title: 'Lỗi',
+            text: 'Hãy nhập giá trị.'
+        });
+        return;
+    }
     var url = 'http://localhost:8080/api/mau-sac/admin/create-update';
     var obj = {
         "id": id,
         "ten": catename,
-        "maMau": document.getElementById("mamau").value,
+        "maMau": maMau,
     }
     const response = await fetch(url, {
         method: 'POST',

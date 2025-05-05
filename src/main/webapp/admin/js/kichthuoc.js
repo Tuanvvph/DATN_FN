@@ -45,6 +45,34 @@ async function saveKichThuoc() {
     var uls = new URL(document.URL)
     var id = document.getElementById("idcm").value
     var catename = document.getElementById("tencm").value
+    if(!catename) {
+        swal({
+            icon: 'error',
+            title: 'Lỗi',
+            text: 'Vui lòng nhập giá trị!'
+        });
+        return
+    }
+    // Kiểm tra có phải là số và trong khoảng 37 - 45
+    if (!/^\d+$/.test(catename)) {
+        swal({
+            icon: 'error',
+            title: 'Lỗi',
+            text: 'Vui lòng chỉ nhập số.'
+        });
+        return
+    } else {
+        var number = parseInt(catename, 10);
+        if (number < 37 || number > 45) {
+            swal({
+                type: 'error',
+                title: 'Lỗi',
+                text: 'Giá trị phải nằm trong khoảng từ 37 đến 45.'
+            });
+            return
+        }
+    }
+
     var url = 'http://localhost:8080/api/kich-thuoc/admin/create-update';
     var obj = {
         "id": id,

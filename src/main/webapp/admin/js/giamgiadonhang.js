@@ -16,10 +16,10 @@ async function loadGiamGiaDH() {
                     <td>${list[i].code}</td>
                     <td>${formatmoney(list[i].donToiThieu)}</td>
                     <td>${formatmoney(list[i].giaTriGiam)}</td>
-                    <td>${list[i].ngayBatDau}</td>
-                    <td>${list[i].ngayKetThuc}</td>
-                    <td>${list[i].createdAt}</td>
-                    <td>${list[i].updatedAt == null?'':list[i].updatedAt}</td>
+                    <td>${list[i].ngayBatDau?dayjs(list[i].ngayBatDau).format('YYYY-MM-DD HH:mm:ss'):''}</td>
+                    <td>${list[i].ngayKetThuc?dayjs(list[i].ngayKetThuc).format('YYYY-MM-DD HH:mm:ss'):''}</td>
+                    <td>${list[i].createdAt?dayjs(list[i].createdAt).format('YYYY-MM-DD HH:mm:ss'):''}</td>
+                    <td>${list[i].updatedAt == null?'':dayjs(list[i].updatedAt).format('YYYY-MM-DD HH:mm:ss')}</td>
                     <td class="sticky-col">
                         <a href="addvoucherdonhang?id=${list[i].id}" class="btn btn-warning btn-sm">Sửa</a>
                         <button onclick="deleteVoucher(${list[i].id})" class="btn btn-danger btn-sm">Xóa</button>
@@ -63,6 +63,15 @@ async function saveVoucher() {
         "donToiThieu": document.getElementById("minamount").value,
         "ngayBatDau": document.getElementById("from").value,
         "ngayKetThuc": document.getElementById("to").value,
+    }
+
+    if(!voucher.code || !voucher.ngayBatDau || !voucher.ngayKetThuc || !voucher.donToiThieu || !voucher.giaTriGiam) {
+        swal({
+            type: 'error',
+            title: 'Lỗi',
+            text: 'Hãy nhập giá trị.'
+        });
+        return;
     }
     const response = await fetch(url, {
         method: 'POST',

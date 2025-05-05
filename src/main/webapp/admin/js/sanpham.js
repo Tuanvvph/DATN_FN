@@ -186,8 +186,6 @@ async function loadSanPhamTaiQuay() {
     $('#example').DataTable();
 }
 
-// <td>${list[i].createdAt}</td>
-// <td>${list[i].updatedAt == null?'':list[i].updatedAt}</td>
 
 async function loadAProductCT(id) {
     var url = 'http://localhost:8080/api/sanpham-chitiet/public/all?idSp=' + id;
